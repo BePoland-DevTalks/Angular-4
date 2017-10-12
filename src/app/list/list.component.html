@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <ul class="list-group">
+    <li (click)="increment()" class="list-group-item justify-content-between">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      <span class="badge badge-default badge-pill">{{counter}}</span>
+    </li>
+    <li class="list-group-item justify-content-between">
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+      <span class="badge badge-default badge-pill">{{counter2}}</span>
+    </li>
+  </ul>
+
+  <input class="form-control mt-5" [(ngModel)]="counter2"/>
+
+</div>
+
+<div class="container mt-5">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <td *ngFor="let name of columnNames">{{name}}</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of tableData">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.age}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-table></app-table>
+<app-table></app-table>
